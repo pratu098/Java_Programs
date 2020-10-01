@@ -1,0 +1,31 @@
+// Java Program implementing linear search
+
+import java.util.Scanner;
+
+public class Linear_search {
+	static void linear_search(int[] A, int n, int e)
+	{
+		int index=-1;
+		for(int i=0;i<n;i++)
+		{
+			if(A[i]==e)
+				index=i+1;
+		}
+		if(index==-1)
+			System.out.println("Element not found");
+		else
+			System.out.println("Element "+e+"found at "+index+"position");
+	}
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter no. of elements:");
+		int n = in.nextInt();
+		int[] A = new int[n];
+		for(int i=0;i<n;i++)
+			A[i]=in.nextInt();
+		System.out.println("Enter element to be searched:");
+		int element = in.nextInt();
+		linear_search(A,n,element);
+	}
+
+}
